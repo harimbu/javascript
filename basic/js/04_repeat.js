@@ -77,4 +77,24 @@
     }
 }
 
+// 1 ~ 25 입력된 5행 5열의 테이블 출력
+{
+    let num = 1
+    let tbl = '<table>'
+
+    for(let i=1; i<=10; i++) {
+        tbl += '<tr>'
+        for(let j=1; j<=10; j++) {
+            tbl += `<td>${num}</td>`
+            num++
+        }
+        tbl += '</tr>'
+    }
+    tbl += '</table>'
+
+    console.log(tbl);
+    document.querySelector('.box').innerHTML = tbl
+}
+
+
 

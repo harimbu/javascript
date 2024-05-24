@@ -12,4 +12,19 @@ bgBtn.addEventListener('click', function() {
     colorName.textContent = bg[randomBgNum]
 })
 
+hexBtn.addEventListener('click', function() {
+    // #45bg45
+
+    let hexColor = '#'
+    for(let i=0; i <= 5; i++) {
+        const randomHexNum = Math.floor(Math.random() * hex.length)
+        // console.log(hex[randomHexNum]);
+        hexColor += hex[randomHexNum]         
+    }
+    // console.log(hexColor);
+
+    document.body.style.backgroundColor = hexColor
+    colorName.textContent = hexColor
+})
+
 

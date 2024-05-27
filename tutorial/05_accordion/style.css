@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.contents {
+    max-width: 800px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.contents .item {
+}
+
+.contents .item h2 {
+    background-color: #ddd;
+    padding: 16px 0;
+    cursor: pointer;
+    font-size: 22px;
+}

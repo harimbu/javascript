@@ -2,14 +2,19 @@ const form = document.querySelector('.todo_form')
 const input = form.querySelector('input')
 const ul = document.querySelector('.todo_list')
 
-const todos = []
+let todos = []
 
 function saveTodo() {
     localStorage.setItem('todos', JSON.stringify(todos))
 }
 
-function removeTodo() {
-    console.log('삭제')
+function removeTodo(e) {
+    const li = e.target.parentNode
+    li.remove() 
+    const newTodos = todos.filter(todo => todo.id !== parseInt(li.id))
+    todos = newTodos
+
+    saveTodo()    
 }
 
 function paintTodo(text) {
@@ -34,8 +39,7 @@ function handleSumbit(e) {
 }
 
 function loadTodo() {
-    const loadTodos = localStorage.getItem('todos')
-    console.log(loadTodos);
+    const loadTodos = localStorage.getItem('todos')   
 
     if(loadTodos !== null) {
         const parseTodo = JSON.parse(loadTodos)
